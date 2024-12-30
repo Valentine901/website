@@ -1,0 +1,23 @@
+
+{% for x in persons %}
+<footer id="footer" class="footer position-relative light-background">
+    <div class="container">
+      <h3 class="sitename">{{x.firstname}} {{x.lastname}}</h3>
+      <p>{{x.body}}</p>
+      <div class="social-links d-flex justify-content-center">
+        <a href="https://web.facebook.com/"><i class="bi bi-facebook"></i></a>
+        <a href=" https://wa.me/+234{{x.phone}}"><i class="bi bi-whatsapp"></i></a>
+   
+        <a href="http://www.linkedin.com/in/valentine-dinyelu-385b76322"><i class="bi bi-linkedin"></i></a>
+      </div>
+      <div class="container">
+        <div class="copyright">
+          <span>Copyright</span> <strong class="px-1 sitename">Frank Din</strong> <span>All Rights Reserved</span>
+        </div>
+        <div class="credits">
+          Designed by <a href="https://web.facebook.com/franklin.dinyelu">Frank Din</a> 
+        </div>
+      </div>
+    </div>
+  </footer>
+  {% endfor %}

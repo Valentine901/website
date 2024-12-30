@@ -1,0 +1,81 @@
+{% load static %}
+<section id="resume" class="resume section">
+
+    <!-- Section Title -->
+    <div class="container section-title" data-aos="fade-up">
+      <h2>Resume</h2>
+      <p>Highly motivated and experienced backend developer with a strong passion for building scalable, efficient, and reliable server-side applications. Proficient in a range of programming languages, including Python, JavaScript, and SQL</p>
+    </div><!-- End Section Title -->
+
+    <div class="container">
+        {% for item in persons %}
+      <div class="row">
+        
+        <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+          <h3 class="resume-title">Sumary</h3>
+
+          <div class="resume-item pb-0">
+            <h4>Valentine Valtino</h4>
+            <p><em>Innovative and deadline-driven web developer with 7 months  of experience 
+                developing user-centered web applications from initial concept to final, polished
+                deliverable.</em></p>
+            <ul>
+              <li>{{item.city}}</li>
+              <li><a href="tel:+234{{item.phone}}" target="_blank">+234{{item.phone}}</a></li>
+              <li><a href="mailto: {{item.email}}">{{item.email}}</a></li>
+            </ul>
+          </div><!-- Edn Resume Item -->
+
+          <h3 class="resume-title">Education</h3>
+          <div class="resume-item">
+            <h4>{{item.degree}} &amp; Self Taught developer</h4>
+            <h5>2024 - {{item.year}}</h5>
+            <p><em>{{item.degree}}</em></p>
+            <p>{{item.body}}</p>
+          </div><!-- Edn Resume Item -->
+
+          <div class="resume-item">
+            <h4>{{item.degree}} &amp; Self Taught developer</h4>
+            <h5>2024 - {{item.year}}</h5>
+            <p><em>{{item.city}} Institute of Computer Science, Unizik, Awka</em></p>
+            <p>{{item.body}}</p>
+          </div><!-- Edn Resume Item -->
+
+        </div>
+
+        <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+          <h3 class="resume-title">Professional Experience</h3>
+          <div class="resume-item">
+            <h4>Junior Backend Developer</h4>
+            <h5>2024 - Present</h5>
+            <p><em>Experion,{{item.city}}, Awka</em></p>
+            <ul>
+              <li>Lead in the design, development, and implementation of the graphic, layout, and production
+                communication materials</li>
+              <li>Delegate tasks to the 7 members of the design team and provide counsel on all aspects of the
+                project. </li>
+              <li>Supervise the assessment of all graphic materials in order to ensure quality and accuracy of the
+                design</li>
+              <li>Oversee the efficient use of production project budgets ranging from $500 - $25,000</li>
+            </ul>
+          </div><!-- Edn Resume Item -->
+
+          <div class="resume-item">
+            <h4>Backend development Expertise</h4>
+            <h5>2024 - {{item.year}}</h5>
+            <p><em>Stepping Stone Advertising,{{item.city}}</em></p>
+            <ul>
+              <li>Developed numerous web app (todoapp, blogapp, chatbot system).</li>
+              <li>Managed up to 3 projects or tasks at a given time while under pressure</li>
+              <li>Recommended and consulted with clients on the most appropriate development</li>
+              <li>Created 2+ web app presentations and proposals a month for clients and account managers</li>
+            </ul>
+          </div><!-- Edn Resume Item -->
+
+        </div>
+
+      </div>
+{% endfor %}
+    </div>
+
+  </section><!-- /Resume Section -->
